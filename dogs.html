@@ -1,0 +1,32 @@
+<html>
+  <head>
+  <title>狗颜色统计</title>
+  </head>
+  <body>
+    <h1>狗颜色登记</h1>
+    <select id='dogs'>
+      <option value='yellow'>黄狗</option>
+      <option value='black'>黑狗</option>
+      <option value='gray'>灰狗</option>
+      <option value='white'>白狗</option>
+      <option value='mixed'>花狗</option>
+    </select>
+    <button id='btnDj' onclick=dengji()>确认</button>
+  </body>
+  <script>
+    let dogs = [];
+    let dogel = document.getElementById('dogs')
+    function dengji(){
+
+      let color = dogel.value;
+      let dog = {};
+      dog.color = color;
+      dogs.push(dog);
+      console.log('执行函数登记',color);
+      dogel.selectedIndex = Math.round(Math.random()*100)%dogel.options.length;
+4
+    }
+
+
+  </script>
+</html>
